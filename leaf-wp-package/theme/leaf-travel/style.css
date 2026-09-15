@@ -1,0 +1,85 @@
+/*
+Theme Name: Leaf Travel
+Theme URI: https://example.com/leaf-travel
+Author: Your Name
+Author URI: https://example.com
+Description: Lightweight travel theme for Leaf Tour and Travels (inspired by globalrisingtravel.com, not a copy). Mobile-first, minimal CSS.
+Version: 1.0.0
+License: GPL-2.0-or-later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: leaf-travel
+*/
+
+/* Base reset */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: #2e2e2e; line-height: 1.6; }
+
+/* Brand */
+:root {
+  --brand-dark-green: #1F7A5C;
+  --brand-accent: #E69A2F;
+  --bg-muted: #f7f7f7;
+}
+
+a { color: var(--brand-dark-green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.container { width: 92vw; max-width: 1180px; margin: 0 auto; }
+
+/* Header */
+.site-header { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #eee; z-index: 100; }
+.site-brand { display: flex; align-items: center; gap: 2vw; padding: 2vh 4vw; }
+.site-brand .logo { width: 32px; height: 32px; border-radius: 50%; background: var(--brand-dark-green); display: inline-block; }
+.site-title { font-weight: 700; letter-spacing: .5px; color: #142f28; }
+.nav-toggle { margin-left: auto; background: none; border: 0; font-size: 6vw; line-height: 1; cursor: pointer; }
+.site-nav { display: none; }
+.site-nav.active { display: block; }
+.site-nav ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2vh; padding: 2vh 4vw; }
+.site-nav a { color: #142f28; font-weight: 600; }
+
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+  .site-nav { display: block; }
+  .site-nav ul { flex-direction: row; align-items: center; gap: 2vw; padding: 0; }
+}
+
+/* Hero */
+.hero { background: linear-gradient(0deg, rgba(31,122,92,.85), rgba(31,122,92,.85)), url('../assets/hero-placeholder.jpg') center/cover no-repeat; color: #fff; padding: 16vh 4vw; text-align: center; }
+.hero h1 { font-size: 8vw; margin: 0 0 2vh; }
+.hero p { font-size: 4vw; margin: 0 0 4vh; opacity: .95; }
+.btn { display: inline-block; padding: 1.8vh 4.5vw; border-radius: 999px; background: var(--brand-accent); color: #fff; font-weight: 700; }
+.btn-primary { background: var(--brand-dark-green); }
+.btn:hover { filter: brightness(.95); }
+
+@media (min-width: 768px) {
+  .hero h1 { font-size: 3.2vw; }
+  .hero p { font-size: 1.4vw; }
+}
+
+/* Sections */
+.section { padding: 8vh 0; }
+.section-muted { background: var(--bg-muted); }
+.section h2 { font-size: 6vw; margin: 0 0 2vh; color: #142f28; }
+.section p.lead { font-size: 4vw; color: #3b3b3b; }
+@media (min-width: 768px) {
+  .section h2 { font-size: 2.2vw; }
+  .section p.lead { font-size: 1.1vw; }
+}
+
+/* Cards */
+.grid { display: grid; grid-template-columns: 1fr; gap: 3vh 4vw; }
+@media (min-width: 768px) { .grid.cols-3 { grid-template-columns: repeat(3, 1fr); } }
+.card { background: #fff; border: 1px solid #eee; border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; }
+.card img { width: 100%; height: 28vh; object-fit: cover; }
+.card-body { padding: 2vh 2vw 3vh; }
+.card-title { margin: 0 0 1vh; font-weight: 700; color: #142f28; }
+.meta { display: flex; gap: 4vw; color: #4a4a4a; font-size: .95em; }
+
+/* Footer */
+.site-footer { background: #0f1f1b; color: #dfe9e6; padding: 6vh 0; margin-top: 6vh; }
+.site-footer a { color: #bfead8; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 3vh; }
+@media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+
+

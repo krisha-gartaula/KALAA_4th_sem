@@ -1,0 +1,6 @@
+:root { --brand-dark-green: #1F7A5C; }
+.has-primary-color { color: var(--brand-dark-green) !important; }
+.has-primary-background-color { background-color: var(--brand-dark-green) !important; }
+.button, .wp-block-button__link.is-style-fill { background: var(--brand-dark-green); color: #fff; }
+
+
